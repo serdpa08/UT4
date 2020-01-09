@@ -1,3 +1,11 @@
+.imagen1 {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
 
+figcaption {
+  text-align: center;
+}
 
 /*# sourceMappingURL=hojaestilos.css.map */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="hojaestilos.css">
+</head>
+
+<body>
+    <h2>Figure y figcaption</h2>
+    <figure>
+        <img class="imagen1" src="images/ceporro.jpg" alt="ralph broken heart" title="ralph broken heart">
+        <figcaption>Ralph broken heart</figcaption>
+    </figure>
+
+
+    <h2>picture</h2>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="images/ceporro.jpg">
+        <source media="(min-width: 465px)" srcset="images/ceporro1.jpg">
+        <img src="images/ceporro3.jpg" alt="Imagen retrocompatible" style="width:auto;">
+    </picture>
+
+    <audio id="audio1" controls>
+        <source src="musica/Fredo Bang - The Box Freestyle (Roddy Ricch Remix).mp3" type="audio/mpeg">
+        <source src="musica/Fredo Bang - The Box Freestyle (Roddy Ricch Remix).ogg" type="audio/ogg">
+        <source src="musica/Fredo Bang - The Box Freestyle (Roddy Ricch Remix).wav" type="audio/wav">
+        Tu navegador no soporta esta etiqueta HTML5
+    </audio>
+    <div>
+
+
+        <button onclick="document.getElementById('audio1').play()">Reproducir el Audio</button> <button
+            onclick="document.getElementById('audio1').pause()">Pausar el Audio</button> <button
+            onclick="document.getElementById('audio1').volume+=0.1">Aumentar el Volumen</button> <button
+            onclick="document.getElementById('audio1').volume-=0.1">Disminuir el Volumen</button> 
+        </div>
+        <h2>API DE HTL5 dedicada al audio</h2>
+</body>
+
+</html>
