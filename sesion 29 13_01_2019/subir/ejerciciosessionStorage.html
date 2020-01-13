@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p><button onclick=" cuantosClicks()" type="button">Haz clic aquí</button></p>
+    <div id="elementoAlmacen"></div>
+    <p>Si hacemos clic en el botón, veremos aumentar el contador </p> 
+        <p>Si cerramos la pestaña, el valor almacenado se
+            reiniciará debido a que estamos utilizando almacenamiento local únicamente para esta sesión. 
+        </p>
+        <script>
+            function cuantosClicks() {
+                if (typeof (Storage) !== "undefined") {
+                    if (sessionStorage.cuentadeclicks) {
+                        //Si existe el contador, lo incrementamos en 1 
+                        sessionStorage.cuentadeclicks = Number(sessionStorage.cuentadeclicks) + 1;
+                        //Realizamos conversión a número para evitar problemas. Los datos siempre se almacenan como cadena y requieren conversión. 
+                    } else { // Si no existe el contador, lo creamos 
+                        sessionStorage.cuentadeclicks = 1;
+                    } document.getElementById("elementoAlmacen").innerHTML = "Has hecho clic en el botón: " + sessionStorage.cuentadeclicks + " veces en esta sesión.";
+                }
+                else {
+                    document.getElementById("elementoAlmacen").innerHTML = "El navegador no soporta almacenamiento local";
+                }
+            } 
+        </script>
+</body>
+
+</html>

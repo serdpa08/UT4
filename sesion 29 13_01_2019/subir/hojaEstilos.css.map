@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"hojaEstilos.css"}
+{"version":3,"sourceRoot":"","sources":["../procesar/hojaEstilos.scss"],"names":[],"mappings":"AAAA;EACI","file":"hojaEstilos.css"}

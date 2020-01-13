@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="hojaEstilos.css">
+</head>
+<body>
+    <h2>Almacenamiento Local</h2>
+
+    <button onclick="trabajarElementoEquipo()">Mostrar Equipo</button>
+    <div id="equipo"></div>
+    <script>
+    if(typeof(Storage) !== undefined){
+        alert("Soporta Storage");
+    }
+    else{
+        alert("No soporta Storage");
+    }
+
+    function trabajarElementoEquipo(){
+        if(typeof(Storage) !== undefined){
+        localStorage.equipo = "deportivo";
+        document.getElementById('equipo').innerHTML = localStorage.equipo;
+
+    }
+    else{
+        alert("No soporta Storage");
+    }
+    }
+    </script>
+</body>
+</html>
