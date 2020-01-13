@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="hojaEstilos.css">
+</head>
+
+<body>
+    <video id="video1" width="300" height="200" autoplay="autoplay" controls loop="loop">
+        <source src="video/buitre.mp4" type="video/mp4">
+        <source src="video/buitre.ogv" type="video/ogg">
+        <source src="video/buitre.webm" type="video/webm"> Tu navegador no soporta esta etiqueta HTML5
+    </video>
+
+    <div>
+
+        <button onclick="document.getElementById('video1').play()">Reproducir el Vídeo</button>
+        <button onclick="document.getElementById('video1').pause()">Pausar el Vídeo</button>
+        <button onclick="document.getElementById('video1').volume+=0.1">Aumentar el Volumen del Vídeo</button>
+
+        <button onclick="document.getElementById('video1').volume-=0.1">Disminuir el Volumen del Vídeo</button>
+
+
+    </div>
+
+    <video id="video1" width="600" height="400" autoplay="autoplay" controls loop="loop">
+        <source src="Recursos/K-PD.mp4" type="video/mp4">
+        <source src="Recursos/K-PD.ogv" type="video/ogg">
+        <source src="Recursos/K-PD.webm" type="video/webm">
+
+        Tu navegador no soporta esta etiqueta HTML5 </video> <br>
+    <div> <button onclick="reproducirVideo('video1')">Reproducir el Vídeo</button> <button
+            onclick="pausarVideo('video1')">Pausar el Vídeo</button> <button onclick="pararVideo('video1')">Parar el
+            Vídeo</button> <button onclick="reiniciarVideo('video1')">Reiniciar el Vídeo</button> <button
+            onclick="aumentarVolumenVideo('video1')">Aumentar el Volumen del Vídeo</button> <button
+            onclick="disminuirVolumenVideo('video1')">Disminuir el Volumen del Vídeo</button> </div>
+
+    <script> function reproducirVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.play(); } function pausarVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.pause(); } function pararVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.currentTime = 0; elementoVideo.pause(); } function reiniciarVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.currentTime = 0; elementoVideo.play(); } function aumentarVolumenVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.volume += 0.1; } function disminuirVolumenVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.volume -= 0.1; } </script>
+
+</body>
+
+</html>
